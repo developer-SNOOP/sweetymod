@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "S S",
+    "   "
+  ],
+  "key": {
+    "S": {
+      "item": "worldsexpansion:sapphire"
+    }
+  },
+  "result": {
+    "item": "worldsexpansion:sapphire_helmet",
+    "count": 1
+  }
+}

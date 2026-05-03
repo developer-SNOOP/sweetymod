@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsexpansion:ruby_block"
+    }
+  ],
+  "result": {
+    "item": "worldsexpansion:ruby",
+    "count": 9
+  }
+}

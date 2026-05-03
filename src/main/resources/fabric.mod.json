@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "worldsexpansion",
+	"version": "${version}",
+	"name": "WORLDS: EXPANSION",
+	"description": "A unique expansion mod adding new ores (Ruby, Sapphire, Etherium), full tool & armor sets, custom food and worldgen.",
+	"authors": [
+		"developer-SNOOP"
+	],
+	"contact": {
+		"homepage": "https://github.com/developer-SNOOP/sweetymod",
+		"sources": "https://github.com/developer-SNOOP/sweetymod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/worldsexpansion/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sweetymod.worldsexpansion.WorldsExpansion"
+		],
+		"client": [
+			"com.sweetymod.worldsexpansion.client.WorldsExpansionClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

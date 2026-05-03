@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "worldsexpansion:block/deepslate_etherium_ore"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "worldsexpansion:ruby_ore",
+    "worldsexpansion:deepslate_ruby_ore",
+    "worldsexpansion:sapphire_ore",
+    "worldsexpansion:deepslate_sapphire_ore",
+    "worldsexpansion:ruby_block",
+    "worldsexpansion:sapphire_block",
+    "worldsexpansion:raw_etherium_block"
+  ]
+}
