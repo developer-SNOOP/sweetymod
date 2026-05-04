@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RSR",
+    "SAS",
+    "RSR"
+  ],
+  "key": {
+    "R": "worldsexpansion:ruby",
+    "S": "worldsexpansion:sapphire",
+    "A": "minecraft:apple"
+  },
+  "result": {
+    "count": 1,
+    "id": "worldsexpansion:world_apple"
+  }
+}

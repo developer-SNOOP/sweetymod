@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "c:etherium_ores"
-  },
-  "result": "worldsexpansion:etherium_ingot",
-  "experience": 1.0,
-  "cookingtime": 100
-}

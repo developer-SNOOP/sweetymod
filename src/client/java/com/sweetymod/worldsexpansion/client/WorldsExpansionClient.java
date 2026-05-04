@@ -1,10 +1,11 @@
 package com.sweetymod.worldsexpansion.client;
 
+import com.sweetymod.worldsexpansion.WorldsExpansion;
 import net.fabricmc.api.ClientModInitializer;
 
 public class WorldsExpansionClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		// No client-only setup needed; default cutout/solid block layers are fine for our items/blocks.
+		WorldsExpansion.LOGGER.info("[WORLDS: EXPANSION] Client initialized.");
 	}
 }

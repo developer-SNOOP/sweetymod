@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "worldsexpansion:sapphire_hoe"
+  }
+}

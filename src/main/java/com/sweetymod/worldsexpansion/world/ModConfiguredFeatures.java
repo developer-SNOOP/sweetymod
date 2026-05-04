@@ -1,17 +1,16 @@
 package com.sweetymod.worldsexpansion.world;
 
 import com.sweetymod.worldsexpansion.WorldsExpansion;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 public class ModConfiguredFeatures {
-	public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
-	public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
-	public static final RegistryKey<ConfiguredFeature<?, ?>> ETHERIUM_ORE_KEY = registerKey("etherium_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = create("ruby_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = create("sapphire_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ETHERIUM_ORE_KEY = create("etherium_ore");
 
-	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-		return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(WorldsExpansion.MOD_ID, name));
+	private static ResourceKey<ConfiguredFeature<?, ?>> create(String path) {
+		return ResourceKey.create(Registries.CONFIGURED_FEATURE, WorldsExpansion.id(path));
 	}
 }

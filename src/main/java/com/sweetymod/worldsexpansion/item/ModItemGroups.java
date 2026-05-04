@@ -2,82 +2,87 @@ package com.sweetymod.worldsexpansion.item;
 
 import com.sweetymod.worldsexpansion.WorldsExpansion;
 import com.sweetymod.worldsexpansion.block.ModBlocks;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 public class ModItemGroups {
-	public static final ItemGroup WORLDS_EXPANSION_GROUP = Registry.register(Registries.ITEM_GROUP,
-		new Identifier(WorldsExpansion.MOD_ID, "worldsexpansion"),
-		FabricItemGroup.builder()
-			.icon(() -> new ItemStack(ModItems.ETHERIUM_INGOT))
-			.displayName(Text.translatable("itemgroup.worldsexpansion.worldsexpansion"))
-			.entries((displayContext, entries) -> {
-				// Materials
-				entries.add(ModItems.RUBY);
-				entries.add(ModItems.SAPPHIRE);
-				entries.add(ModItems.RAW_ETHERIUM);
-				entries.add(ModItems.ETHERIUM_INGOT);
 
-				// Food
-				entries.add(ModItems.WORLD_APPLE);
+	public static final ResourceKey<CreativeModeTab> WORLDS_EXPANSION_KEY =
+		ResourceKey.create(Registries.CREATIVE_MODE_TAB, WorldsExpansion.id("worldsexpansion"));
+
+	public static final CreativeModeTab WORLDS_EXPANSION_GROUP = Registry.register(
+		BuiltInRegistries.CREATIVE_MODE_TAB,
+		WORLDS_EXPANSION_KEY,
+		FabricCreativeModeTab.builder()
+			.title(Component.translatable("itemgroup.worldsexpansion.worldsexpansion"))
+			.icon(() -> new ItemStack(ModItems.RUBY))
+			.displayItems((displayContext, entries) -> {
+				// Materials
+				entries.accept(ModItems.RUBY);
+				entries.accept(ModItems.SAPPHIRE);
+				entries.accept(ModItems.RAW_ETHERIUM);
+				entries.accept(ModItems.ETHERIUM_INGOT);
 
 				// Ores
-				entries.add(ModBlocks.RUBY_ORE);
-				entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
-				entries.add(ModBlocks.SAPPHIRE_ORE);
-				entries.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
-				entries.add(ModBlocks.ETHERIUM_ORE);
-				entries.add(ModBlocks.DEEPSLATE_ETHERIUM_ORE);
+				entries.accept(ModBlocks.RUBY_ORE);
+				entries.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
+				entries.accept(ModBlocks.SAPPHIRE_ORE);
+				entries.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+				entries.accept(ModBlocks.ETHERIUM_ORE);
+				entries.accept(ModBlocks.DEEPSLATE_ETHERIUM_ORE);
 
-				// Storage Blocks
-				entries.add(ModBlocks.RUBY_BLOCK);
-				entries.add(ModBlocks.SAPPHIRE_BLOCK);
-				entries.add(ModBlocks.ETHERIUM_BLOCK);
-				entries.add(ModBlocks.RAW_ETHERIUM_BLOCK);
+				// Storage blocks
+				entries.accept(ModBlocks.RUBY_BLOCK);
+				entries.accept(ModBlocks.SAPPHIRE_BLOCK);
+				entries.accept(ModBlocks.ETHERIUM_BLOCK);
+				entries.accept(ModBlocks.RAW_ETHERIUM_BLOCK);
 
-				// Tools
-				entries.add(ModItems.RUBY_SWORD);
-				entries.add(ModItems.RUBY_PICKAXE);
-				entries.add(ModItems.RUBY_AXE);
-				entries.add(ModItems.RUBY_SHOVEL);
-				entries.add(ModItems.RUBY_HOE);
+				// Food
+				entries.accept(ModItems.WORLD_APPLE);
 
-				entries.add(ModItems.SAPPHIRE_SWORD);
-				entries.add(ModItems.SAPPHIRE_PICKAXE);
-				entries.add(ModItems.SAPPHIRE_AXE);
-				entries.add(ModItems.SAPPHIRE_SHOVEL);
-				entries.add(ModItems.SAPPHIRE_HOE);
+				// Ruby tools & armor
+				entries.accept(ModItems.RUBY_SWORD);
+				entries.accept(ModItems.RUBY_PICKAXE);
+				entries.accept(ModItems.RUBY_AXE);
+				entries.accept(ModItems.RUBY_SHOVEL);
+				entries.accept(ModItems.RUBY_HOE);
+				entries.accept(ModItems.RUBY_HELMET);
+				entries.accept(ModItems.RUBY_CHESTPLATE);
+				entries.accept(ModItems.RUBY_LEGGINGS);
+				entries.accept(ModItems.RUBY_BOOTS);
 
-				entries.add(ModItems.ETHERIUM_SWORD);
-				entries.add(ModItems.ETHERIUM_PICKAXE);
-				entries.add(ModItems.ETHERIUM_AXE);
-				entries.add(ModItems.ETHERIUM_SHOVEL);
-				entries.add(ModItems.ETHERIUM_HOE);
+				// Sapphire tools & armor
+				entries.accept(ModItems.SAPPHIRE_SWORD);
+				entries.accept(ModItems.SAPPHIRE_PICKAXE);
+				entries.accept(ModItems.SAPPHIRE_AXE);
+				entries.accept(ModItems.SAPPHIRE_SHOVEL);
+				entries.accept(ModItems.SAPPHIRE_HOE);
+				entries.accept(ModItems.SAPPHIRE_HELMET);
+				entries.accept(ModItems.SAPPHIRE_CHESTPLATE);
+				entries.accept(ModItems.SAPPHIRE_LEGGINGS);
+				entries.accept(ModItems.SAPPHIRE_BOOTS);
 
-				// Armor
-				entries.add(ModItems.RUBY_HELMET);
-				entries.add(ModItems.RUBY_CHESTPLATE);
-				entries.add(ModItems.RUBY_LEGGINGS);
-				entries.add(ModItems.RUBY_BOOTS);
-
-				entries.add(ModItems.SAPPHIRE_HELMET);
-				entries.add(ModItems.SAPPHIRE_CHESTPLATE);
-				entries.add(ModItems.SAPPHIRE_LEGGINGS);
-				entries.add(ModItems.SAPPHIRE_BOOTS);
-
-				entries.add(ModItems.ETHERIUM_HELMET);
-				entries.add(ModItems.ETHERIUM_CHESTPLATE);
-				entries.add(ModItems.ETHERIUM_LEGGINGS);
-				entries.add(ModItems.ETHERIUM_BOOTS);
+				// Etherium tools & armor
+				entries.accept(ModItems.ETHERIUM_SWORD);
+				entries.accept(ModItems.ETHERIUM_PICKAXE);
+				entries.accept(ModItems.ETHERIUM_AXE);
+				entries.accept(ModItems.ETHERIUM_SHOVEL);
+				entries.accept(ModItems.ETHERIUM_HOE);
+				entries.accept(ModItems.ETHERIUM_HELMET);
+				entries.accept(ModItems.ETHERIUM_CHESTPLATE);
+				entries.accept(ModItems.ETHERIUM_LEGGINGS);
+				entries.accept(ModItems.ETHERIUM_BOOTS);
 			})
-			.build());
+			.build()
+	);
 
-	public static void registerItemGroups() {
-		WorldsExpansion.LOGGER.info("Registering item groups for " + WorldsExpansion.MOD_ID);
+	public static void register() {
+		WorldsExpansion.LOGGER.info("Registering item groups for {}", WorldsExpansion.MOD_ID);
 	}
 }
