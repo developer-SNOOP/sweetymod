@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "worldsexpansion:raw_etherium",
+  "result": {
+    "id": "worldsexpansion:etherium_ingot",
+    "count": 1
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

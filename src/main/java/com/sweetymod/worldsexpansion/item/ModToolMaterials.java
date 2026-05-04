@@ -1,59 +1,38 @@
 package com.sweetymod.worldsexpansion.item;
 
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.recipe.Ingredient;
+import com.sweetymod.worldsexpansion.util.ModTags;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.ToolMaterial;
 
-import java.util.function.Supplier;
+public class ModToolMaterials {
 
-public enum ModToolMaterials implements ToolMaterial {
-	RUBY(2, 950, 7.0f, 2.5f, 18, () -> Ingredient.ofItems(ModItems.RUBY)),
-	SAPPHIRE(2, 1700, 8.0f, 3.0f, 14, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
-	ETHERIUM(4, 2400, 10.0f, 4.0f, 22, () -> Ingredient.ofItems(ModItems.ETHERIUM_INGOT));
+	// Ruby — between iron and diamond, decent durability and damage
+	public static final ToolMaterial RUBY = new ToolMaterial(
+		BlockTags.INCORRECT_FOR_IRON_TOOL, // can mine same as iron
+		950,                                // durability
+		7.0f,                               // mining speed
+		2.5f,                               // attack damage bonus
+		18,                                 // enchantability
+		ModTags.Items.REPAIRS_RUBY_EQUIPMENT
+	);
 
-	private final int miningLevel;
-	private final int itemDurability;
-	private final float miningSpeed;
-	private final float attackDamage;
-	private final int enchantability;
-	private final Supplier<Ingredient> repairIngredient;
+	// Sapphire — diamond-tier
+	public static final ToolMaterial SAPPHIRE = new ToolMaterial(
+		BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+		1700,
+		8.0f,
+		3.0f,
+		14,
+		ModTags.Items.REPAIRS_SAPPHIRE_EQUIPMENT
+	);
 
-	ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed,
-					 float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
-		this.miningLevel = miningLevel;
-		this.itemDurability = itemDurability;
-		this.miningSpeed = miningSpeed;
-		this.attackDamage = attackDamage;
-		this.enchantability = enchantability;
-		this.repairIngredient = repairIngredient;
-	}
-
-	@Override
-	public int getDurability() {
-		return this.itemDurability;
-	}
-
-	@Override
-	public float getMiningSpeedMultiplier() {
-		return this.miningSpeed;
-	}
-
-	@Override
-	public float getAttackDamage() {
-		return this.attackDamage;
-	}
-
-	@Override
-	public int getMiningLevel() {
-		return this.miningLevel;
-	}
-
-	@Override
-	public int getEnchantability() {
-		return this.enchantability;
-	}
-
-	@Override
-	public Ingredient getRepairIngredient() {
-		return this.repairIngredient.get();
-	}
+	// Etherium — beyond netherite, very durable, very strong
+	public static final ToolMaterial ETHERIUM = new ToolMaterial(
+		BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+		2400,
+		10.0f,
+		4.0f,
+		22,
+		ModTags.Items.REPAIRS_ETHERIUM_EQUIPMENT
+	);
 }

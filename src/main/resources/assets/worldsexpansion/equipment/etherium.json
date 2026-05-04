@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "worldsexpansion:etherium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "worldsexpansion:etherium"
+      }
+    ]
+  }
+}

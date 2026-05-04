@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "E": "worldsexpansion:etherium_ingot",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "worldsexpansion:etherium_shovel"
+  }
+}

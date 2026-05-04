@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "worldsexpansion:ruby"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "worldsexpansion:ruby"
+      }
+    ]
+  }
+}

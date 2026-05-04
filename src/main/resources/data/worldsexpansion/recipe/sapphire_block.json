@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": "worldsexpansion:sapphire"
+  },
+  "result": {
+    "count": 1,
+    "id": "worldsexpansion:sapphire_block"
+  }
+}

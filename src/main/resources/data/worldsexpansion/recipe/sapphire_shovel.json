@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": "worldsexpansion:sapphire",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "worldsexpansion:sapphire_shovel"
+  }
+}

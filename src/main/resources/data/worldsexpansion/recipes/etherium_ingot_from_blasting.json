@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "worldsexpansion:raw_etherium"
-  },
-  "result": "worldsexpansion:etherium_ingot",
-  "experience": 1.0,
-  "cookingtime": 100
-}

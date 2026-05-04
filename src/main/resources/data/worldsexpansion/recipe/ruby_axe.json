@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RR ",
+    "RS ",
+    " S "
+  ],
+  "key": {
+    "R": "worldsexpansion:ruby",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "worldsexpansion:ruby_axe"
+  }
+}
