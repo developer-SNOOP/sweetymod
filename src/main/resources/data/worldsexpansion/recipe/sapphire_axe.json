@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SS ",
-    "SS ",
+    "AA ",
+    "AS ",
     " S "
   ],
   "key": {
+    "A": "worldsexpansion:sapphire",
     "S": "minecraft:stick"
   },
   "result": {
